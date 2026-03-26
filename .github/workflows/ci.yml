@@ -1,0 +1,35 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main,develop]
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to run the pipeline"
+        required: false
+        default: "main"
+
+jobs:
+  init:
+    name: Initialize
+    uses: vardhan556/shared-github-actions/.github/workflows/init.yml@main
+    with:
+      branch: ${{ github.event.inputs.branch || github.ref_name }}
+    
+  build-auth:
+    name: Build auth service
+    needs: init
+    uses: vardhan556/shared-github-actions/.github/workflows/build.yml@main
+    with:
+      service_name: auth-service
+      service-path: services/auth-service
+
+  build-user:
+    name: Build user service
+    needs: init
+    uses: vardhan556/shared-github-actions/.github/workflows/build.yml@main
+    with:
+      service_name: user-service
+      service_path: services/user-service
+      
