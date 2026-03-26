@@ -23,7 +23,7 @@ jobs:
     uses: vardhan556/shared-github-actions/.github/workflows/build.yml@main
     with:
       service_name: auth-service
-      service-path: services/auth-service
+      service_path: services/auth-service
 
   build-user:
     name: Build user service
@@ -32,4 +32,3 @@ jobs:
     with:
       service_name: user-service
       service_path: services/user-service
-      
