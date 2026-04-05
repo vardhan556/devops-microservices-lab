@@ -36,5 +36,5 @@ jobs:
       service_name: user-service
       service_path: services/user-service
     secrets:
-      DOCKER_USERNAME: ${{secrets.docker_username}}
-      DOCKER_TOKEN: ${{secrets.docker_token}}
+      DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+      DOCKER_TOKEN: ${{secrets.DOCKER_TOKEN}}
