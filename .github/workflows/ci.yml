@@ -24,6 +24,9 @@ jobs:
     with:
       service_name: auth-service
       service_path: services/auth-service
+    secrets:
+      docker_username: ${{secrets.docker_username}}
+      docker_token: ${{secrets.docker_token}}
 
   build-user:
     name: Build user service
@@ -32,3 +35,6 @@ jobs:
     with:
       service_name: user-service
       service_path: services/user-service
+    secrets:
+      docker_username: ${{secrets.docker_username}}
+      docker_token: ${{secrets.docker_token}}
