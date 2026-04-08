@@ -25,8 +25,8 @@ jobs:
       service_name: auth-service
       service_path: services/auth-service
     secrets:
-      DOCKER_USERNAME: ${{secrets.docker_username}}
-      DOCKER_TOKEN: ${{secrets.docker_token}}
+      DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+      DOCKER_TOKEN: ${{secrets.DOCKER_TOKEN}}
 
   build-user:
     name: Build user service
