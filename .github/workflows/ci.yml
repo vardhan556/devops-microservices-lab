@@ -27,6 +27,8 @@ jobs:
     secrets:
       DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
       DOCKER_TOKEN: ${{secrets.DOCKER_TOKEN}}
+      SONAR_HOST_URL: ${{secrets.SONAR_HOST_URL}}
+      SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
 
   build-user:
     name: Build user service
@@ -38,6 +40,8 @@ jobs:
     secrets:
       DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
       DOCKER_TOKEN: ${{secrets.DOCKER_TOKEN}}
+      SONAR_HOST_URL: ${{secrets.SONAR_HOST_URL}}
+      SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
 
   build-notification:
     name: Build notification service
@@ -49,6 +53,8 @@ jobs:
     secrets:
       DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
       DOCKER_TOKEN: ${{secrets.DOCKER_TOKEN}}
+      SONAR_HOST_URL: ${{secrets.SONAR_HOST_URL}}
+      SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
 
   build-product:
     name: Build product service
@@ -60,4 +66,6 @@ jobs:
     secrets:
       DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
       DOCKER_TOKEN: ${{secrets.DOCKER_TOKEN}}
+      SONAR_HOST_URL: ${{secrets.SONAR_HOST_URL}}
+      SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
 
