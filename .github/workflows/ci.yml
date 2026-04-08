@@ -38,3 +38,26 @@ jobs:
     secrets:
       DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
       DOCKER_TOKEN: ${{secrets.DOCKER_TOKEN}}
+
+  build-notification:
+    name: Build notification service
+    needs: init
+    uses: vardhan556/shared-github-actions/.github/workflows/build.yml@main
+    with:
+      service_name: notification-service
+      service_path: services/notification-service
+    secrets:
+      DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+      DOCKER_TOKEN: ${{secrets.DOCKER_TOKEN}}
+
+  build-product:
+    name: Build product service
+    needs: init
+    uses: vardhan556/shared-github-actions/.github/workflows/build.yml@main
+    with:
+      service_name: notification-service
+      service_path: services/notification-service
+    secrets:
+      DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+      DOCKER_TOKEN: ${{secrets.DOCKER_TOKEN}}
+
